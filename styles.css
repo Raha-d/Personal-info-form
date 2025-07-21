@@ -1,0 +1,180 @@
+@import url(./fonts/IRANSansWeb_Medium.ttf);
+
+body {
+  direction: rtl;
+  font-family: Vazirmatn, Tahoma, sans-serif;
+  background-color: #f6f6f6;
+  padding: 20px;
+  font-family: "iransans", sans-serif;
+}
+
+form {
+  background-color: #f0eeee;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.262);
+}
+h1 {
+  color: #333;
+  font-size: 1.4rem;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 20px;
+}
+/*  */
+.avatar-box {
+  width: 130px;
+  height: 130px;
+  border: 2px dashed #d49f8f;
+  border-radius: 16px;
+  position: relative;
+  background-color: #fcccbe;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.avatar-box:hover {
+  border-color: #e06d50;
+}
+
+.avatar-box i {
+  font-size: 32px;
+  color: #666;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+
+.avatar-box span {
+  font-size: 14px;
+  color: #555;
+}
+
+#avatarPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.avatar-message {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #666;
+  text-align: center;
+}
+
+/*  */
+section {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  display: inline-block;
+  width: 145px;
+  margin-bottom: 10px;
+  color: #383838;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 60%;
+  max-width: 300px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"] {
+  margin-left: 6px;
+}
+
+ul {
+  margin: 10px 0 0;
+  padding-right: 18px;
+  color: #a29f9f;
+  font-size: 14px;
+}
+li::marker {
+  color: #7a7474;
+}
+
+button {
+  margin-top: 12px;
+  background-color: #e06d50;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "iransans", sans-serif;
+}
+
+button:hover {
+  background-color: #ca4d2d;
+}
+
+p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.flex-fuild {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-container {
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+.line {
+  border-top: solid 1px #d8d8d8;
+  padding: 5px 0 10px 0;
+  width: 50%;
+}
+span {
+  color: #e06d50;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #e06d50;
+}
+
+input[type="radio"] {
+  accent-color: #e06d50;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #333;
+  font-size: 0.7 rem;
+  font-weight: semibold;
+}

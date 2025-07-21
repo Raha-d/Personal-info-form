@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>پروفایل</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form id="profileForm">
+      <!-- بخش پروفایل  -->
+      <section>
+        <h1>پروفایل</h1>
+        <div class="line"></div>
+        <div class="profile-container">
+          <div id="avatarContainer">
+            <div class="avatar-box" id="avatarBox">
+              <i class="fas fa-user" id="avatarIcon"></i>
+              <span id="avatarText">افزودن تصویر</span>
+              <img id="avatarPreview" />
+            </div>
+            <input
+              type="file"
+              id="avatar"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+
+          <div>
+            <ul>
+              <li>حداکثر حجم ۵ مگابایت</li>
+              <li>فرمت jpg و png</li>
+            </ul>
+          </div>
+        </div>
+        <p id="avatarMessage" class="avatar-message"></p>
+      </section>
+      <div class="line"></div>
+
+      <!-- 
+      بخش شماره همراه 
+       -->
+      <section id="mobile-section">
+        <h2>شماره همراه</h2>
+
+        <input type="text" id="mobileInput" placeholder="09123456789" />
+        <ul>
+          <li>شماره همراه باید معتبر باشد</li>
+          <li>برای تایید شماره همراه جدید کد اعتبار سنجی ارسال خواهد شد</li>
+        </ul>
+        <button onclick="validateMobile()" type="button">بررسی شماره</button>
+        <p id="mobileMessage"></p>
+      </section>
+      <div class="line"></div>
+      <!-- فرم اطلاعات شخصی -->
+      <section id="personal-info">
+        <h2>اطلاعات شخصی</h2>
+
+        <div class="flex-fuild">
+          <label>نام: <span>*</span></label>
+          <input type="text" id="firstName" placeholder=" علی" />
+        </div>
+        <div class="flex-fuild">
+          <label>نام خانوادگی: <span>*</span></label>
+          <input type="text" id="lastName" placeholder=" رضایی" />
+        </div>
+        <div class="flex-fuild">
+          <label>نام پدر:</label>
+          <input type="text" id="fatherName" placeholder=" مهدی" />
+        </div>
+        <div class="flex-fuild">
+          <label>کد ملی:</label>
+          <input
+            type="text"
+            id="nationalCode"
+            placeholder=" 1234567890"
+          /><br />
+        </div>
+        <button type="button" onclick="validatePersonalInfo()">
+          ذخیره اطلاعات
+        </button>
+        <p id="personalMessage"></p>
+      </section>
+      <div class="line"></div>
+      <!-- اطلاعات کاربری تاریخ تولد و شهر و استان -->
+      <section id="user-info">
+        <h2>اطلاعات کاربری</h2>
+
+        <div class="flex-fuild">
+          <label>جنسیت:</label>
+          <div>
+            <label><input type="radio" name="gender" value="male" /> مرد</label>
+            <label style="margin-right: 15px"
+              ><input type="radio" name="gender" value="female" /> زن</label
+            >
+          </div>
+        </div>
+
+        <div class="flex-fuild">
+          <label>تاریخ تولد:</label>
+          <input type="date" id="birthdate" />
+        </div>
+
+        <div class="flex-fuild">
+          <label>استان:</label>
+          <select id="province" onchange="loadCities()">
+            <option value="">انتخاب کنید</option>
+            <option value="تهران">تهران</option>
+            <option value="اصفهان">اصفهان</option>
+          </select>
+        </div>
+
+        <div class="flex-fuild">
+          <label>شهر:</label>
+          <select id="city"></select>
+        </div>
+
+        <div class="flex-fuild">
+          <label>کد پستی:</label>
+          <input type="text" id="postalCode" placeholder="10 رقم" />
+        </div>
+
+        <div class="flex-fuild">
+          <label>ایمیل:</label>
+          <input type="email" id="email" placeholder="example@mail.com" />
+        </div>
+
+        <div class="flex-fuild">
+          <label>آدرس:</label>
+          <textarea id="address" rows="3"></textarea>
+        </div>
+
+        <button type="button" onclick="validateUserInfo()">
+          ذخیره اطلاعات
+        </button>
+        <p id="userMessage"></p>
+      </section>
+    </form>
+
+    <footer>طراحی شده توسط راضیه دهقانی</footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
